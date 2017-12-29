@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GKE-0V-NSJ">
-                                <rect key="frame" x="12" y="40" width="351" height="424.5"/>
+                                <rect key="frame" x="12" y="40" width="351" height="455.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSw-Fj-NKl">
                                         <rect key="frame" x="0.0" y="0.0" width="86.5" height="20.5"/>
@@ -41,8 +41,8 @@
                                             <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hYF-Hb-3oq"/>
                                         </connections>
                                     </button>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pcd-4t-5w2">
-                                        <rect key="frame" x="0.0" y="104.5" width="320" height="320"/>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="pcd-4t-5w2">
+                                        <rect key="frame" x="0.0" y="104.5" width="351" height="351"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="pcd-4t-5w2" secondAttribute="height" multiplier="1:1" id="JXP-H3-dTq"/>
                                         </constraints>
@@ -71,4 +71,7 @@
             <point key="canvasLocation" x="6" y="79"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultPhoto" width="540" height="540"/>
+    </resources>
 </document>
