@@ -44,6 +44,9 @@
                                         </stackView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="C2p-zI-kn2" id="nPr-lR-qBS"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
