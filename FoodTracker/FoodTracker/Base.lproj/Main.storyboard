@@ -46,6 +46,8 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="C2p-zI-kn2" id="nPr-lR-qBS"/>
+                                    <outlet property="photoImageView" destination="CXj-Ap-tuk" id="BW1-7e-Ye8"/>
+                                    <outlet property="ratingControl" destination="kn7-ZV-NpX" id="Mak-dN-LP2"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
