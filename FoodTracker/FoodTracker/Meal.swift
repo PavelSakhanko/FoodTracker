@@ -18,7 +18,6 @@ class Meal {
     
     //MARK: Initialization
     
-    
     init?(name: String, photo: UIImage?, rating: Int) {
         
         // The name must not be empty
@@ -36,6 +35,4 @@ class Meal {
         self.photo = photo
         self.rating = rating
     }
-    
 }
-
