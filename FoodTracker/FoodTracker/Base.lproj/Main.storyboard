@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Meal Table View Controller-->
+        <!--Your Meals-->
         <scene sceneID="IT7-YN-cfu">
             <objects>
                 <tableViewController id="EfA-yW-8oy" customClass="MealTableViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -56,7 +56,13 @@
                             <outlet property="delegate" destination="EfA-yW-8oy" id="KfJ-bS-1wL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="8bS-2L-n5q"/>
+                    <navigationItem key="navigationItem" title="Your Meals" id="8bS-2L-n5q">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Uan-UF-BGf">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="Dy1-iY-Xfq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WZz-ms-oyi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -65,13 +71,13 @@
         <!--Meal View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MealViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MealViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GKE-0V-NSJ">
-                                <rect key="frame" x="12" y="40" width="351" height="441"/>
+                                <rect key="frame" x="12" y="84" width="351" height="441"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ySV-iG-DVW">
                                         <rect key="frame" x="0.0" y="0.0" width="351" height="30"/>
@@ -119,7 +125,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="640.79999999999995" y="97.601199400299862"/>
+            <point key="canvasLocation" x="903" y="98"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rWz-N3-fjT">
