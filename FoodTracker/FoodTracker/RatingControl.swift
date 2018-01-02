@@ -11,8 +11,15 @@ import UIKit
 @IBDesignable class RatingControl: UIStackView {
     
     //MARK: Properties
+    
     private var ratingButtons = [UIButton]()
-  
+    
+    var rating = 0 {
+        didSet {
+            updateButtonSelectionStates()
+        }
+    }
+    
     @IBInspectable var starSize: CGSize = CGSize(width: 44.0, height: 44.0) {
         didSet {
             setupButtons()
@@ -25,24 +32,19 @@ import UIKit
         }
     }
     
-    var rating = 0 {
-        didSet {
-            updateButtonSelectionStates()
-        }
-    }
-    
-//MARK: Initialization
+    //MARK: Initialization
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupButtons()
     }
+    
     required init(coder: NSCoder) {
         super.init(coder: coder)
         setupButtons()
     }
     
-//MARK: Button Action
+    //MARK: Button Action
     
     @objc func ratingButtonTapped(button: UIButton) {
         guard let index = ratingButtons.index(of: button) else {
@@ -61,11 +63,12 @@ import UIKit
         }
     }
     
-//MARK: Private Methods
+    
+    //MARK: Private Methods
     
     private func setupButtons() {
         
-        // clear any existing buttons
+        // Clear any existing buttons
         for button in ratingButtons {
             removeArrangedSubview(button)
             button.removeFromSuperview()
@@ -114,7 +117,7 @@ import UIKit
             // If the index of a button is less than the rating, that button should be selected.
             button.isSelected = index < rating
             
-            // Set the hint string for the currently selected star
+            // Set accessibility hint and value
             let hintString: String?
             if rating == index + 1 {
                 hintString = "Tap to reset the rating to zero."
@@ -122,7 +125,6 @@ import UIKit
                 hintString = nil
             }
             
-            // Calculate the value string
             let valueString: String
             switch (rating) {
             case 0:
@@ -133,9 +135,9 @@ import UIKit
                 valueString = "\(rating) stars set."
             }
             
-            // Assign the hint string and value string
             button.accessibilityHint = hintString
             button.accessibilityValue = valueString
         }
     }
 }
+

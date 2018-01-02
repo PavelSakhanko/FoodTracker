@@ -118,11 +118,9 @@ class MealTableViewController: UITableViewController {
             guard let mealDetailViewController = segue.destination as? MealViewController else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
-            
             guard let selectedMealCell = sender as? MealTableViewCell else {
                 fatalError("Unexpected sender: \(sender)")
             }
-            
             guard let indexPath = tableView.indexPath(for: selectedMealCell) else {
                 fatalError("The selected cell is not being displayed by the table")
             }
@@ -153,16 +151,6 @@ class MealTableViewController: UITableViewController {
                 meals.append(meal)
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
-            // Save the meals.
-            saveMeals()
-            
-            // Add a new meal.
-            let newIndexPath = IndexPath(row: meals.count, section: 0)
-            
-            meals.append(meal)
-            tableView.insertRows(at: [newIndexPath], with: .automatic)
-            
-            
         }
     }
     
